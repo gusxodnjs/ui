@@ -1,10 +1,10 @@
 steps:
   ### Build
   - id: 'install'
-    name: 'gcr.io/cloud-builders/npm'
+    name: 'gcr.io/cloud-builders/npm:node-16.18.0'
     args: ['install']
   - id: 'source build'
-    name: 'gcr.io/cloud-builders/npm'
+    name: 'gcr.io/cloud-builders/npm:node-16.18.0'
     args: ['run','build']
   - id: 'docker build'
     name: 'gcr.io/cloud-builders/docker'
